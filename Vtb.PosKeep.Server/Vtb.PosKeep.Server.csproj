@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vtb.PosKeep.Business\Vtb.PosKeep.Business.csproj" />
+    <ProjectReference Include="..\Vtb.PosKeep.Common\Vtb.PosKeep.Common.Standard.Logging\Vtb.PosKeep.Common.AsyncLogger\Vtb.PosKeep.Common.AsyncLogger.csproj" />
+    <ProjectReference Include="..\Vtb.PosKeep.Common\Vtb.PosKeep.Common.Standard.Logging\Vtb.PosKeep.Common.Logging\Vtb.PosKeep.Common.Logging.csproj" />
+    <ProjectReference Include="..\Vtb.PosKeep.Entity\Vtb.PosKeep.Entity.csproj" />
+    <ProjectReference Include="..\Vtb.PosKeep.Storage\Vtb.PosKeep.Storage.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Update="Data\Clients.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\Deals.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\Instruments.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\StockData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Update="wwwroot\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+
+  <ProjectExtensions><VisualStudio><UserProperties Configs_4appsettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

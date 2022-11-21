@@ -1,0 +1,46 @@
+﻿@inject Microsoft.Extensions.Options.IOptions<ConfigOptions> config
+@{
+    ViewData["Title"] = "VTB Position Keeping";
+}
+<script type="text/javascript">
+    const Globals = (function ()
+    {
+        function request(controller, id, currency, count) {
+            return '/api/portfolio/' + controller + '/' + id + '?currency=' + currency + '&point_count=' + count;
+        };
+
+        return {
+            PointCount: @config.Value.DefaultPointsCount,
+            Currency: @config.Value.DefaultCurrencyDCode,
+
+            accountStateRequest: function (id, moment) {
+                return request('currentposition', id, this.Currency, this.PointCount) + '&moment=' + moment;
+            },
+            accountResultRequest: function (id) {
+                return request('resultcurve', id, this.Currency, this.PointCount);
+            },
+            accountProfitRequest: function (id) {
+                return request('profitcurve', id, this.Currency, this.PointCount);
+            },
+            accountValueRequest: function (id) {
+                return request('valuecurve', id, this.Currency, this.PointCount);
+            }
+        };
+    })(); 
+</script>
+<div class="text-center">
+    <h1 class="display-4">VTB Position Keeping</h1>
+    <div id="app">
+        <hr />
+        <p>
+            <router-link to="/accounts/1">Клиентские счета</router-link>
+            <router-link to="/instruments/1">Инструменты</router-link>
+            <router-link to="/demoloader/false">Загрузить демо-данные</router-link>
+            <router-link to="/dataloader/false">Загрузить данные</router-link>
+        </p>
+        <router-view></router-view>
+        <router-view name="chart"></router-view>
+    </div>    
+</div>
+
+
