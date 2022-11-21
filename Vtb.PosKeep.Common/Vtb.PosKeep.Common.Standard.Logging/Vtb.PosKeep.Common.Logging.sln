@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vtb.PosKeep.Common.Logging", "Vtb.PosKeep.Common.Logging\Vtb.PosKeep.Common.Logging.csproj", "{A4A80E1C-10A8-460F-A808-FC8D3817834D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vtb.PosKeep.Common.AsyncLogger", "Vtb.PosKeep.Common.AsyncLogger\Vtb.PosKeep.Common.AsyncLogger.csproj", "{6EF2B09A-EC66-480F-B261-F9EEFBE1EEE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4A80E1C-10A8-460F-A808-FC8D3817834D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4A80E1C-10A8-460F-A808-FC8D3817834D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4A80E1C-10A8-460F-A808-FC8D3817834D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4A80E1C-10A8-460F-A808-FC8D3817834D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EF2B09A-EC66-480F-B261-F9EEFBE1EEE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EF2B09A-EC66-480F-B261-F9EEFBE1EEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EF2B09A-EC66-480F-B261-F9EEFBE1EEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF2B09A-EC66-480F-B261-F9EEFBE1EEE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1EC040A-969A-4E0A-9A6A-72B2D0F9E9C4}
+	EndGlobalSection
+EndGlobal
